@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 50px 300px;
+    padding: 10px;
+    border: 2px solid black;
+    width: 750px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid black;
+    margin-left: 10px;
+}
+
+h4 {
+    font-weight: lighter;
+}
+
+form {
+    margin: 55px;
+    margin-left: 600px;
+    border-radius: 10px;
+    height: 35px;
+}
+
+.place {
+    margin: 10px;
+    margin-top: 50px;
+}
+
+h1 {
+    font-family: "PT Serif", serif;
+    font-size: 50px;
+}
+
+h3 {
+    font-family: "PT Serif", serif;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.weather {
+    display: block;
+    margin-top: -160px;
+    margin-left: 500px;
+}
+
+p {
+    margin-left: 10px;
+    font-size: 15em;
+}
+
+h1.degrees {
+    margin-left: 100px;
+    padding: 20px;
+    margin: 5px;
+    margin-top: -50px;
+}
+
+.time {
+    margin-top: 60px;
+}
+
+.clock {
+    margin: 700px;
+    margin-top: -55px;
+}
+
+.days {
+    display: flex;
+    margin-top: 15em;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.box {
+    display: block;
+    text-align: center;
+    border-radius: 1px;
+    border: 5px solid black;
+    margin: 5px;
+    height: 85px;
+    width: 60px;
+    border-radius: 30px;
+}
