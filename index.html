@@ -1,159 +1,87 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <title>Weater App</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-  </head>
-    
+
+    <head>
+
+        <title>Weater App</title>
+
+        <meta charset="UTF-8" />
+
+        <link rel="stylesheet" href="src/style.css">
+
+        <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    </head>
 
     <body>
+
         <main>
-    
+
             <div class="container">
 
                 <h4>Weather</h4>
 
-                
                 <form id="search-form">
+
                     <input
+
                         type="text"
+
                         placeholder="Search for a city"
+
                         autocomplete="off"
+
                         autofocus="on"
+
                         id="search-text-input"
-                    >   
-                    <input type="submit" value="Search">    
-                      
+
+                    >
+
+                    <input type="submit" value="Search">
+
                 </form>
 
                 <div class="location">
 
                     <div class="place">
-                    <h1 class="" id="city-name"></h1>
+
+                    <h1 class="" id="city-name">Search for a city</h1>
+
                     <h3>Saturday</h3>
+
                 </div>
 
                 <div class="weather">
+
                     <p>☀️</p>
+
                     <h1 id="temperature"></h1>
+
                 </div>
 
                 <div class="time" >
-                    <div class="" id="set-time"></div> 
+
+                    <div class="" id="set-time"></div>
+
                     <span class="" id="set-clock"></span>
-                </div>
 
-                <div class="days">
-                    <div class="box">
-                        <br />
-                        Monday
-                        <br />
-                        🌧️
-                        <br />
-                        15℃
-                        <br />
-                    </div>
-
-                    <div class="box">
-                        <br />
-                        Monday
-                        <br />
-                        🌧️
-                        <br />
-                        15℃
-                        <br />
-                    </div>
-
-                    <div class="box">
-                        <br />
-                        Monday
-                        <br />
-                        🌧️
-                        <br />
-                        15℃
-                        <br />
-                    </div>
-
-                    <div class="box">
-                        <br />
-                        Monday
-                        <br />
-                        🌧️
-                        <br />
-                        15℃
-                        <br />
-                    </div>
-
-                    <div class="box">
-                        <br />
-                        Monday
-                        <br />
-                        🌧️
-                        <br />
-                        15℃
-                        <br />
-                    </div>
                 </div>
 
                 <footer>
+
                     <a href="https://github.com/Giftyaning/Weather-App">Open source code</a>
+
                     by Gifty Aning
+
                 </footer>
+
             </div>
+
         </main>
+
+        <script src="src/index.js"></script>
+
     </body>
 
-    <script>
-        let now = new Date();
-        
-        let time = document.querySelector("#set-time");
-        let date = now.getDate();
-        let year = now.getFullYear(); 
-        let hour = now.getHours();
-        if (hour < 10) { hour = `0${hour}`};
-
-        let minutes = now.getMinutes();  
-        if (minutes < 10) { misnutes = `0${minutes}`};
-
-        let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-        let day = days[now.getDay()]; 
-
-        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        let month = months[now.getMonth()];
-
-
-        time.innerHTML = `${day} ${hour}:${minutes}`; 
-
-      function showTemperature(response) {
-        let temperature = Math.round(response.data.main.temp);
-        let temperatureElement = document.querySelector("#temperature");
-        temperatureElement.innerHTML = `${temperature}ºC`;
-      }
-
-      function getWeather(cityName) {
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=3980a7c8f2a782241a093131b099f993&units=metric`;
-        axios.get(apiUrl).then(showTemperature);
-      }
-
-        function search(event) {
-            event.preventDefault();
-            let searchInput = document.querySelector("#search-text-input");
-
-
-
-            let h1 = document.querySelector("#city-name");
-            h1.innerHTML = `${searchInput.value}`;
-
-
-            let cityName = searchInput.value;
-            getWeather(cityName);
-        }
-
-        let form = document.querySelector("#search-form")
-
-        form.addEventListener("submit", search);
-        
-    </script>
 </html>
