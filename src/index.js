@@ -38,6 +38,16 @@ let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oc
 
 //Function to show current temperature.
 
+const weatherIcons = {
+  "Clear": "☀️",
+  "Clouds": "☁️",
+  "Rain": "🌧️",
+  "Drizzle": "🌦️",
+  "Thunderstorm": "⛈️",
+  "Snow": "❄️",
+  "Mist": "🌫️",
+};
+
 function showTemperature(response) {
 
     let temperature = Math.round(response.data.main.temp);
@@ -46,6 +56,11 @@ function showTemperature(response) {
 
     temperatureElement.innerHTML = `${temperature}ºC`;
 
+
+
+    let weatherCondition = response.data.weather[0].main;
+    let weatherIconElement = document.querySelector(".weather-icon");
+    weatherIconElement.innerHTML = weatherIcons[weatherCondition] || "❓";
 }
 
 //Function to get the weather data for a specific city.
