@@ -2,22 +2,25 @@
 
 <html>
 
-    <head>
+<head>
 
-        <title>Weater App</title>
+<title>Weater App</title>
 
-        <meta charset="UTF-8" />
+<meta charset="UTF-8" />
 
-        <link rel="stylesheet" href="src/style.css">
+<link rel="stylesheet" href="src/style.css">
 
-        <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 
-    </head>
+<script src="src/index.js"></script>
 
-    <body>
+</head>
 
-        <main>
-            <div class="container">
+<body>
+
+<main>
+
+<div class="container">
 
 <h4>Weather App</h4>
 
@@ -53,7 +56,7 @@ Search for a city
 
 <li class="day" id="date">
 
-Day <span class="time" id="set-time">hours:minutes</span>
+Day <span class="time" id="set-time"></span>
 
 </li>
 
@@ -65,7 +68,7 @@ Humidity: <span id="humid"></span>%
 
 <li class="wind">
 
-Wind: <span id="speed"></span>Km/H
+Wind: <span id="speed"></span>km/h
 
 </li>
 
@@ -75,15 +78,13 @@ Wind: <span id="speed"></span>Km/H
 
 <ul>
 
-<li class="weather-icon">
+<li class="weather-icon"></li>
 
-☀️
-
-</li>
-
-<li class="temp" id="temperature">º(</li>
+<li class="temp" id="temperature"></li>
 
 </ul>
+
+</div>
 
 </div>
 
@@ -97,12 +98,8 @@ by Gifty Aning
 
 </div>
 
-</div>
+</main>
 
-        </main>
-
-        <script src="src/index.js"></script>
-
-    </body>
+</body>
 
 </html>

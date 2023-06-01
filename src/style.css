@@ -1,109 +1,126 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container {
-
-    display: flex;
-
-    flex-direction: column;
-
-    margin: 55px 270px;
-
-    padding: 10px;
-
-    border: 2px solid black;
-
-    max-width: 750px;
-
-    height: 40em;
-
-    font-family: "PT Serif", serif;
-
-}
-
-h4 {
-
-    font-weight: lighter;
-
-}
-
-form {
-
-    margin: 55px;
-
-    margin-left: 580px;
-
-    border-radius: 10px;
-
-    height: 35px;
-
-}
-
-.info {
-
-    margin-top: -50px;
-
-}
-
-li {
-
-    margin: 5px;
-
-    list-style: none;
-
-}
-
-li.city {
-
-    font-size: 50px;
-
-    font: bold;
-
-}
-
-li.day {
-
-    font-size: 20px;
-
-}
-
-.weather {
-
-    display: block;
-
-    margin-top: 0.5px;
-
-    margin-left: 500px;
-
-}
-
-.weather-icon {
-
-    font-size: 10em;
-
-}
-
-.temp {
-
-    font-size: 50px;
-
-    font: bold;
-
-}
-
-footer {
-
-    display: flex;
-
-    align-content: flex-start;
-
-    align-items: center;
-
-    padding: 10px;
-
-    margin-top: auto;
-
-}
+    * {
+        margin: 0;
+        
+        padding: 0;
+        
+        box-sizing: border-box;
+        
+    }
+    
+    body {
+    
+        background-image: url("images/weath.jpg");
+    
+        background-size: cover;
+    
+        background-repeat: no-repeat;
+    
+        color: #fff;
+    
+    }
+    
+    .container {
+    
+        display: flex;
+    
+        flex-direction: column;
+    
+        margin: 55px 300px;
+    
+        padding: 10px;
+    
+        border: 0.5px solid black;
+    
+        max-width: 750px;
+    
+        height: 40em;
+    
+        font-family: "PT Serif", serif;
+    
+        background-color: rgba(251, 245, 255, 0.15);
+    
+    }
+    
+    h4 {
+    
+        font-weight: lighter;
+    
+    }
+    
+    form {
+    
+        margin: 55px;
+    
+        margin-left: 580px;
+    
+        border-radius: 5px;
+    
+        height: 35px;
+    
+    }
+    
+    .info {
+    
+        margin-top: -50px;
+    
+    }
+    
+    li {
+    
+        margin: 5px;
+    
+        list-style: none;
+    
+    }
+    
+    li.city {
+    
+        font-size: 50px;
+    
+        font: bold;
+    
+    }
+    
+    li.day {
+    
+        font-size: 20px;
+    
+    }
+    
+    .weather {
+    
+        display: block;
+    
+        margin-top: 0.5px;
+    
+        margin-left: 500px;
+    
+    }
+    
+    .weather-icon {
+    
+        font-size: 10em;
+    
+    }
+    
+    .temp {
+    
+        font-size: 50px;
+    
+        font: bold;
+    
+    }
+    
+    footer {
+    
+        display: flex;
+    
+        align-content: flex-start;
+    
+        align-items: center;
+    
+        padding: 10px;
+    
+        margin-top: auto;
+    
+    }
