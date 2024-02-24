@@ -1,109 +1,66 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <title>Weater App</title>
 
-<head>
+    <meta charset="UTF-8" />
 
-<title>Weater App</title>
+    <link rel="stylesheet" href="src/style.css" />
 
-<meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 
-<link rel="stylesheet" href="src/style.css">
+    <script src="src/index.js"></script>
+  </head>
 
-<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <body>
+    <main>
+      <div class="container">
+        <h4>Weather App</h4>
 
-<script src="src/index.js"></script>
+        <form id="search-form">
+          <input
+            type="text"
+            placeholder="Search for a city"
+            autocomplete="off"
+            autofocus="on"
+            id="search-text-input"/>
 
-</head>
+          <input type="submit" value="Search" />
+        </form>
 
-<body>
+        <div class="info">
+          <ul>
+            <li class="city" id="city-name">Search for a city</li>
 
-<main>
+            <li class="day" id="date">
+               <span class="time" id="set-time"></span>
+            </li>
 
-<div class="container">
+            <li>Description: <span id="description"></span></li>
 
-<h4>Weather App</h4>
+            <li class="humidity">Humidity: <span id="humid"></span></li>
 
-<form id="search-form">
+            <li class="wind">Wind: <span id="speed"></span></li>
+          </ul>
 
-<input
+          <div class="weather">
+            <ul>
+              <li class="weather-icon"></li>
 
-type="text"
+              <li class="temp" id="temperature"></li>
+            </ul>
+          </div>
+        </div>
 
-placeholder="Search for a city"
+        <footer>
+          <a href="https://github.com/Giftyaning/Weather-App"
+            >Open source code</a
+          >
 
-autocomplete="off"
-
-autofocus="on"
-
-id="search-text-input"
-
->
-
-<input type="submit" value="Search">
-
-</form>
-
-<div class="info">
-
-<ul>
-
-<li class="city" id="city-name">
-
-Search for a city
-
-</li>
-
-<li class="day" id="date">
-
-Day <span class="time" id="set-time"></span>
-
-</li>
-
-<li >
-  Description: <span id="description"></span>
-</li>
-
-<li class="humidity">
-
-Humidity: <span id="humid"></span>
-
-</li>
-
-<li class="wind">
-
-Wind: <span id="speed"></span>
-
-</li>
-
-</ul>
-
-<div class="weather">
-
-<ul>
-
-<li class="weather-icon"></li>
-
-<li class="temp" id="temperature"></li>
-
-</ul>
-
-</div>
-
-</div>
-
-<footer>
-
-<a href="https://github.com/Giftyaning/Weather-App">Open source code</a>
-
-by Gifty Aning
-
-</footer>
-
-</div>
-
-</main>
-
-</body>
-
+          by Gifty Aning
+        </footer>
+      </div>
+    </main>
+  </body>
 </html>
